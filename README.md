@@ -8,3 +8,7 @@ since i'm still learning Go.
 
 #### Current Knowlegde
 Right now i know just simply what is compiler and interpreter.
+
+[answers 1]
+
+
