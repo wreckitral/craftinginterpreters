@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
 
 typedef struct node {
     char* data;
@@ -31,6 +32,17 @@ void insert(Node** list, Node* prev, const char* str)
     }
 }
 
+Node* find(Node* list, const char* str) // find node using the data
+{
+    while(list != NULL)
+    {
+        if(strcmp(str, list->data) == 0) return list; // comparing the str to every node's data
+        list = list->next; // moving the pointer
+    }
+
+    return NULL; // return null if not found
+}
+
 void printList(Node* list)
 {
     while (list != NULL) // as long as the head of the list is not empty or as long as the list is still going
@@ -45,8 +57,10 @@ int main()
 {
     Node *list = NULL;
 
+    insert(&list, NULL, "four");
     insert(&list, NULL, "one");
-    insert(&list, NULL, "two");
+    insert(&list, find(list, "one"), "two");
+    insert(&list, find(list, "two"), "three");
 
     printList(list);
 }
