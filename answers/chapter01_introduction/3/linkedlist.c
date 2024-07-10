@@ -43,6 +43,17 @@ Node* find(Node* list, const char* str) // find node using the data
     return NULL; // return null if not found
 }
 
+void delete(Node** list, Node* node)
+{
+    if (node->prev != NULL) node->prev->next = node->next; // if its not the head
+    if (node->next != NULL) node->next->prev = node->prev; // if tis not the tail
+
+    if (*list == node) *list = node->next; // if the head, update
+
+    free(node->data);
+    free(node);
+}
+
 void printList(Node* list)
 {
     while (list != NULL) // as long as the head of the list is not empty or as long as the list is still going
@@ -57,10 +68,14 @@ int main()
 {
     Node *list = NULL;
 
-    insert(&list, NULL, "four");
-    insert(&list, NULL, "one");
+    insert(&list, NULL, "four"); // initiating tail
+    insert(&list, NULL, "one"); // inititing head
     insert(&list, find(list, "one"), "two");
     insert(&list, find(list, "two"), "three");
+
+    printList(list);
+
+    delete(&list, find(list, "two"));
 
     printList(list);
 }
