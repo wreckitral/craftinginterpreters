@@ -18,4 +18,4 @@ And the one of the most important fundamental that people might dont really unde
 #### Current Knowlegde
 A map for my language wizard journey.
 
-[answers 02]
+[answers 02](https://github.com/wreckitral/craftinginterpreters/blob/main/answers/chapter02_map.md)
