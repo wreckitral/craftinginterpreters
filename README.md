@@ -19,3 +19,11 @@ And the one of the most important fundamental that people might dont really unde
 A map for my language wizard journey.
 
 [answers 02](https://github.com/wreckitral/craftinginterpreters/blob/main/answers/chapter02_map.md)
+
+# The Lox Language
+So basically, lox is a pretty straightforward language. Learned that lox implements simpler version of OOP with classes, inheritence and enscapulations.
+
+#### Current Knowledge
+The Lox language and its chronicles.
+
+[answers 03](https://github.com/wreckitral/craftinginterpreters/blob/main/answers/chapter03_lox.md)
